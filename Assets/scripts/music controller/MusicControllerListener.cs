@@ -16,7 +16,7 @@ public class MusicControllerListener : MonoBehaviour   //ATTACH SCRIPT TO MUSIC 
             GetComponent<AudioSource>().loop = true;
         }
 
-        GameObject.Find("MusicController").TryGetComponent<MusicSceneController>(out musicController);  //In main scene must be "MusicController" gameobject with MusicSceneController script to work.
+        musicController = MusicSceneController.Instance;  //In main scene must have "MusicController" instance with MusicSceneController script to work.
         GetComponent<AudioSource>().Stop();
 
         if (musicController != null)                                      //Sending actual music to play by controller
