@@ -1,0 +1,1 @@
+Painting mesh material with Material property block
